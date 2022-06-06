@@ -1,0 +1,77 @@
+{% extends 'authentication/base.html' %}
+
+{% block title %}Car Servicing{% endblock title %}
+
+{% block body %}
+<body style="background-color:#36486b ;">
+<div class="container col-lg-6" style="color:antiquewhite;background-color:#36486b ;">
+  <br><br>
+  <div style="border: 2px solid white;border-style: dashed;">
+  <h3 style="text-align:center;">Contact Us</h3>
+      <div style="text-align:center;">
+        <h5><strong>Email:</strong></h5><h6>ignite.car.services.confirmation@gmail.com</h6>
+        <h5><strong>Phone:</strong></h5><h6>+67 7875534367</h6>
+        <h5><strong>Address:</strong></h5><h6>Near Natraj Traders, Appa Balwant Chowk, Pune 411032</h6>
+      </div>
+    </div>
+    <br><br><br>
+    <h3 style="text-align:center;text-decoration: underline;">Leave a Message</h3><br>
+    <form method="post" action="\contact" class=row g-3">
+      {% comment %} action="authentication\contact" {% endcomment %}
+    {% csrf_token %}
+        <div class="col-md-6">
+          <label for="validationDefault01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationDefault01" name="firstname" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationDefault02" name="lastname" required>
+        </div>
+        <div class="col-md-12">
+          <label for="validationDefaultUsername" class="form-label">Email</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            <input type="text" class="form-control" id="validationDefaultUsername" name="email"  aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault03" class="form-label">City</label>
+          <input type="text" class="form-control" id="validationDefault03" name="city" required>
+        </div>
+        <div class="col-md-6">
+          <label for="validationDefault04" class="form-label">State</label>
+          <select class="form-select" id="validationDefault04" name="state" required>
+            <option selected disabled value="">Choose...</option>
+            
+            <option>Andra Pradesh</option>
+            <option>Arunachal</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chattisgarh</option>
+            <option>Goa</option>
+            <option>Gujrat</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+          </select>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"><h4>Enter your Message</h4></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1"  name ="message" rows="3"></textarea>
+          </div>
+          
+        <div class="col-12" style="text-align:center;">
+          <button class="btn btn-light" type="submit">Submit form</button>
+        </div>
+      </form>
+</div>
+<br>
+</body>
+
+{% endblock body %}
