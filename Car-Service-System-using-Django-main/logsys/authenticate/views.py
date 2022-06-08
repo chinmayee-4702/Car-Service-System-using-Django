@@ -180,13 +180,15 @@ def register(request):
 
 def appoint(request):
     if request.method == "POST":
-        appointname = request.POST.get("appointname",'')
-        appointemail = request.POST.get("appointemail",'')
-        appointdate = request.POST.get("appointdate",'')
-        appointmentfor = request.POST.get("appointmentfor",'')
-        appoint = Appoint(appointemail=appointemail,appointdate=appointdate,appointmentfor=appointmentfor)
-        appoint.save()
+        # appointname = request.POST.get('appointname','')
+        appointemail = request.POST.get('appointemail','')
+        # appointtime=request.POST.get('appointtime','')
+        appointdate = request.POST.get('appointdate','')
+        appointmentfor=request.POST.get('appointmentfor','')
+        contact = Appoint(appointemail=appointemail,appointdate=appointdate,appointmentfor=appointmentfor)
+        contact.save()
     return render(request,"authentication/appoint.html")
+
 
 def login_user(request):
     if request.method == "POST":
@@ -243,4 +245,9 @@ def error(request):
     return render(request,"authentication/error.html")
 
 def feedback(request):
+    # if request.method=="POST":
+    #     feedback=request.POST.get('feedback','')
+    #     message=request.POST.get('message','')
+    #     feedback=Feedback(feedback=feedback,message=message)
+    #     feedback.save()
     return render(request,'authentication/feedback.html')

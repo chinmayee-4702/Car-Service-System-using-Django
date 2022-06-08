@@ -27,7 +27,8 @@
                         <div class="well-title">
                             <h2>Book an Appointment {{garageName}}</h2>
                         </div>
-                        <form>
+                        <form method="post">
+                            {% csrf_token %}
                             <!-- Form start -->
                             <div class="row">
                                 <div class="col-md-6">
@@ -54,7 +55,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label" for="time">Preferred Time</label>
-                                        <select id="time" name="time" class="form-control">
+                                        <select id="time" name="appointtime" class="form-control">
                                             <option value="8:00 to 9:00">8:00 to 9:00</option>
                                             <option value="9:00 to 10:00">9:00 to 10:00</option>
                                             <option value="10:00 to 1:00">10:00 to 1:00</option>
@@ -66,11 +67,11 @@
                                     <div class="form-group">
                                         <label class="control-label" for="appointmentfor">Appointment For</label>
                                         <select id="appointmentfor" name="appointmentfor" class="form-control">
-                                            <option value="Service#1">Select</option>
-                                            <option value="Service#1">Routine Servicing</option>
-                                            <option value="Service#2">Car Washing</option>
-                                            <option value="Service#3">Oiling</option>
-                                            <option value="Service#4">Tire Repair</option>
+                                            <option value="Select">Select</option>
+                                            <option value="Routine Servicing">Routine Servicing</option>
+                                            <option value="Car Washing">Car Washing</option>
+                                            <option value="Oiling">Oiling</option>
+                                            <option value="Tire Repair">Tyre Repair</option>
                                         </select>
                                     </div>
                                 </div>

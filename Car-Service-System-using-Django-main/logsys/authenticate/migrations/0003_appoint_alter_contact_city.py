@@ -13,8 +13,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Appoint',
             fields=[
-                ('appointname', models.AutoField(primary_key=True, serialize=False)),
+                # ('appointname', models.AutoField(primary_key=True, serialize=False)),
                 ('appointemail', models.CharField(default='', max_length=150)),
+                ('appointtime', models.CharField(default='', max_length=150)),
                 ('appointdate', models.CharField(default='', max_length=150)),
                 ('appointmentfor', models.CharField(default='', max_length=150)),
             ],

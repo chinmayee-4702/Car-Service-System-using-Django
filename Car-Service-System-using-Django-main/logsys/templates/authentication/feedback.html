@@ -17,6 +17,8 @@
 
     <h4>Your overall opinion of the services</h4>
     <br>
+    <form method="post">
+      {%csrf_token%}
     <button id="btn5" style="border:none;background-color:#36486b;" onclick="givefd5()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +27,7 @@
         fill="currentColor"
         class="bi bi-emoji-angry"
         viewBox="0 0 16 16"
+        name="feedback"
       >
         <path
           d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -42,6 +45,7 @@
         fill="currentColor"
         class="bi bi-emoji-frown"
         viewBox="0 0 16 16"
+        name="feedback"
       >
         <path
           d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -59,6 +63,7 @@
         fill="currentColor"
         class="bi bi-emoji-neutral"
         viewBox="0 0 16 16"
+        name="feedback"
       >
         <path
           d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -76,6 +81,7 @@
         fill="currentColor"
         class="bi bi-emoji-smile"
         viewBox="0 0 16 16"
+        name="feedback"
       >
         <path
           d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -93,6 +99,7 @@
         fill="currentColor"
         class="bi bi-emoji-laughing"
         viewBox="0 0 16 16"
+        name="feedback"
       >
         <path
           d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -105,10 +112,11 @@
     <br><br><br>
     <h4>Any Suggestions? </h4>
     <div class="mb-3" style="width:80%;padding-left: 15rem;">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Write your Message here..."></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Write your Message here..." name="message"></textarea>
       </div>
       <br>
     <button type="button" class="btn btn-light" onclick="greet()">Submit</button>
+  </form>
     <br><br><br>
     <div><h5 id="reply"> </h5></div>
     <br><br>

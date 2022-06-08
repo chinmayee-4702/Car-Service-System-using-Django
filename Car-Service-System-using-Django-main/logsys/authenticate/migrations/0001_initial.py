@@ -22,12 +22,14 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-             name='Appoint',
+            name='Appoint',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('appointname', models.CharField(default='', max_length=150)),
+                # ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                # ('appointname', models.CharField(default='', max_length=150)),
                 ('appointemail', models.CharField(default='', max_length=150)),
+                # ('appointtime', models.CharField(default='', max_length=150)),
+                ('appointdate', models.CharField(default='', max_length=150)),
                 ('appointmentfor', models.TextField(default='', max_length=500)),
             ],
-        )
+        ),
     ]
