@@ -14,6 +14,9 @@ from pathlib import Path
 from . info import *
 import os
 
+from django.core.mail import send_mail
+from django.http import HttpResponse
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

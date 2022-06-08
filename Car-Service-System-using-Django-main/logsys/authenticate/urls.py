@@ -16,6 +16,6 @@ urlpatterns = [
     path('error404',views.error,name="error"),
     path('feedback',views.feedback,name="feedback"),
     path('confirmation',views.confirmation,name="confirmation"),
-    
-    
+    path('appoint.html',views.appoint,name="appoint"),
 ]
+

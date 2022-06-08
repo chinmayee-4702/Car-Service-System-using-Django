@@ -8,6 +8,18 @@ class Contact(models.Model):
     email = models.CharField(max_length=150,default="")
     #num = models.CharField(max_length=15,default="")
     message = models.TextField(max_length=500,default="")
+    city=models.CharField(max_length=100,default="")
 
     def _str_(self) :
         return self.name
+
+class Appoint(models.Model):
+    appointname = models.AutoField(primary_key=True)
+    appointemail = models.CharField(max_length=150,default="")
+    appointdate = models.CharField(max_length=150,default="")
+    appointmentfor = models.CharField(max_length=150,default="")
+  
+
+    def _str_(self) :
+        return self.name
+

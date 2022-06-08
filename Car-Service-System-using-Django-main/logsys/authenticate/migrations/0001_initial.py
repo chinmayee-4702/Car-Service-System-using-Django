@@ -21,4 +21,13 @@ class Migration(migrations.Migration):
                 ('message', models.TextField(default='', max_length=500)),
             ],
         ),
+        migrations.CreateModel(
+             name='Appoint',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('appointname', models.CharField(default='', max_length=150)),
+                ('appointemail', models.CharField(default='', max_length=150)),
+                ('appointmentfor', models.TextField(default='', max_length=500)),
+            ],
+        )
     ]

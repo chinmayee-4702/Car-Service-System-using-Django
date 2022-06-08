@@ -17,7 +17,7 @@ import io
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
-from .models import Contact
+from .models import Appoint, Contact
 
 # Create your views here.
 def confirmation(request):
@@ -50,7 +50,7 @@ def confirmation(request):
 "All bookings are confirmed by the payment in advance of a non-refundable deposit. A deposit of 30%-50% of the total price and a signed contract are required to hold the vehicle. Deposits are non-refundable since many of our vehicles are booked a year in advance.The balance due is the amount outstanding net of any deposit paid. The balance is due for payment at the time and place of the first pick-up on the day of hire.We do not accept cheques, debit cards, credit cards, or foreign currency as final payment on the day of the hire unless agreed in advance. Settlement of the agreed price in advance by cheque or electronic transfer must allow adequate time for funds to be cleared before the date of travel. Credit card payments are subject to a 5% surcharge on the transaction amount."
 
 "Cancellation of booking:",
-"Canceling a reservation –",
+"Canceling a reservation ",
 
 "Should you cancel your booking then the deposit paid is non-refundable. Additionally where jobs are canceled with less than 14 (fourteen) days notice the full agreed price becomes due and owing. In the event of cancellation between 90 (ninety) days and 14 (fourteen) days of the date of travel 50% (fifty percent) of the total agreed price is due and owing. To cancel a reservation please call the office directlyPLEASE NOTE – if you fail to show up or/and do not notify us of a cancellation, we will charge you for the full price agreed plus petrol and driver costs. This will be charged to your credit card on fileCancellation By Us- We reserve the right to cancel the limousine hire contract between us if:the client doesn’t accept our terms and conditions and/or refuses to make a deposit payment and/or the deposit fail to clear,we do not operate in your area, or one or more of the limos you have booked no longer will be able to cover your reservation.If we do cancel your limo hire contract we will notify you by e-mail or phone and we will re-credit your account with any sum deducted from your credit card as soon as possible, but in any event within 30 days of your reservation. We will not be obliged to offer any additional compensation for the disappointment suffered.",
 
@@ -174,13 +174,19 @@ def register(request):
         to_list=[myuser.email]
         send_mail(subject,message,from_email,to_list,fail_silently=True)
 
-
-
-
         return redirect('login_user')
 
     return render(request, "authentication/register.html")
 
+def appoint(request):
+    if request.method == "POST":
+        appointname = request.POST.get("appointname",'')
+        appointemail = request.POST.get("appointemail",'')
+        appointdate = request.POST.get("appointdate",'')
+        appointmentfor = request.POST.get("appointmentfor",'')
+        appoint = Appoint(appointemail=appointemail,appointdate=appointdate,appointmentfor=appointmentfor)
+        appoint.save()
+    return render(request,"authentication/appoint.html")
 
 def login_user(request):
     if request.method == "POST":
@@ -191,7 +197,7 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            firstName = user.first_name
+            firstName = User.first_name
             return render(request, "authentication/mainpg.html", {firstName: 'firstName'})
         else:
             messages.error(request, "")
@@ -228,7 +234,8 @@ def contact(request):
         lastname = request.POST.get('lastname','')
         message = request.POST.get('message','')
         email = request.POST.get('email','')
-        contact = Contact(firstname=firstname,lastname=lastname,email=email,message=message)
+        city=request.POST.get('city','')
+        contact = Contact(firstname=firstname,lastname=lastname,email=email,message=message,city=city)
         contact.save()
     return render(request,"authentication/contact.html")
 
