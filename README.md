@@ -1,7 +1,7 @@
 # Car-Service-System-using-Django
 Django based Management system
 
-<h3>Login-Register Page</h3>
+<!-- <h3>Login-Register Page</h3>
 <img src="![Screenshot (354)](https://user-images.githubusercontent.com/78889572/172343218-773dea8f-aceb-4cf7-9dbb-2a2852a7dfb6.png)"></img>
 <img src="![Screenshot (355)](https://user-images.githubusercontent.com/78889572/172343234-87a242a1-b8f7-4e30-bd3b-98ca27b6e6ad.png)"></img>
 <h3>Home Page</h3>
@@ -15,7 +15,7 @@ Django based Management system
 <img src="![Scr![Screenshot (352)](https://user-images.githubusercontent.com/78889572/172343368-9e658532-e4ae-4369-9066-2ee39df4ecac.png)"></img>
 <h3>Feedback Page</h3>
 <img src="[Screenshot (353)](https://user-images.githubusercontent.com/78889572/172343386-741a65d4-1e9c-4238-9343-300dc0cf2357.png)"></img>
-
+ -->
 
 Authors :
 Chinmayee Kulkarni 112003074,
