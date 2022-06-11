@@ -16,6 +16,12 @@ Django based Management system
 <h3>Feedback Page</h3>
 <img src="[Screenshot (353)](https://user-images.githubusercontent.com/78889572/172343386-741a65d4-1e9c-4238-9343-300dc0cf2357.png)"></img>
  -->
+ <h3>Project Demo</h3>
+ 
+
+https://user-images.githubusercontent.com/78889572/173181495-3455ef4b-3160-4b10-b792-8e8d54ddfa44.mp4
+
+
 
 Authors :
 Chinmayee Kulkarni 112003074,
