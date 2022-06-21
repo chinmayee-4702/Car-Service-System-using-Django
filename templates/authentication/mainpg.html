@@ -1,0 +1,179 @@
+{% extends 'authentication/base.html' %}
+
+{% block title %}Car Servicing{% endblock title %}
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Servicing</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+  </head> -->
+  <!-- <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ignite</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/booking">Search for Garages</a></li>
+                  <li><a class="dropdown-item" href="#">Feedback</a></li>
+                  <li><class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+      
+     
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html> 
+{% block body %}
+<div class="BgImg" style="background-color:#36486b;">
+<br><br>
+      <h1 style="text-align: center;color: antiquewhite;">
+        Ignite Car Service Booking Portal
+      </h1>
+      <br>
+<div class="container-fluid" style="text-align:center;display: flex;margin-left: 8rem;">
+  <br><br>
+   <!-- <h2>
+    <li>Login to your Account</li>
+    <li>Search for all the Garages near you</li>
+    <li>Book a Slot at your preferred time</li>
+    <li>Wohooo Your appointment is Booked</li>
+  </h2>  -->
+  <div style="padding:1rem;">
+  <div class="card" style="width: 18rem;height: 14rem;" data-aos="flip-left">
+    <div class="card-body">
+      <p class="card-text"><h2>Login to your Account</h2></p>
+      <br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<div style="padding:1rem;">
+  <div class="card" style="width: 18rem;height: 14rem;" data-aos="flip-left">
+    <div class="card-body" >
+      <p class="card-text"><h2>Search for all the Garages near you</h2></p>
+      <br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<div style="padding:1rem;">
+  <div class="card" style="width: 18rem;height: 14rem;" data-aos="flip-left">
+    <div class="card-body">
+      <p class="card-text"><h2>Book a Slot at your preferred time</h2></p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+      </svg>
+    </div>
+  </div>
+</div>
+<div style="padding:1rem;">
+  <div class="card" style="width: 18rem;height: 14rem;" data-aos="flip-left">
+    <div class="card-body">
+      <p class="card-text"><h2>Wohooo Your appointment is Booked!!</h2></p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-emoji-sunglasses" viewBox="0 0 16 16">
+        <path d="M4.968 9.75a.5.5 0 1 0-.866.5A4.498 4.498 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.498 3.498 0 0 1 8 11.5a3.498 3.498 0 0 1-3.032-1.75zM7 5.116V5a1 1 0 0 0-1-1H3.28a1 1 0 0 0-.97 1.243l.311 1.242A2 2 0 0 0 4.561 8H5a2 2 0 0 0 1.994-1.839A2.99 2.99 0 0 1 8 6c.393 0 .74.064 1.006.161A2 2 0 0 0 11 8h.438a2 2 0 0 0 1.94-1.515l.311-1.242A1 1 0 0 0 12.72 4H10a1 1 0 0 0-1 1v.116A4.22 4.22 0 0 0 8 5c-.35 0-.69.04-1 .116z"/>
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-1 0A7 7 0 1 0 1 8a7 7 0 0 0 14 0z"/>
+      </svg>
+    </div>
+  </div>
+</div>
+</div>
+<br><br>
+  <b><h1 style="text-align: center;color: aliceblue;font-family: 'Macondo', cursive;font-size: 3.5rem;">Happy Servicing!!!</h1></b>
+  <section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-lg-3 stats">
+          <i class="fa fa-map-pin" aria-hidden="true"></i>
+          <div class="counting" data-count="25" style="color:aliceblue;">0</div>
+          <h5 style="color:aliceblue;">Cities</h5>
+        </div>
+  
+        <div class="col-lg-3 stats">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+          <div class="counting" data-count="500" style="color:aliceblue;">0</div>
+          <h5 style="color:aliceblue;">Garages</h5>
+        </div>
+
+        <div class="col-lg-3 stats">
+          <i class="fa fa-car" aria-hidden="true"></i>
+          <div class="counting" data-count="999" style="color:aliceblue;">0</div>
+          <h5 style="color:aliceblue;">Cars Serviced</h5>
+        </div>
+  
+        <div class="col-lg-3 stats">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <div class="counting" data-count="100" style="color:aliceblue;">0</div>
+          <h5 style="color:aliceblue;">Happy clients</h5>
+        </div>
+  
+  
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  
+  </section>
+<br><br>
+
+  <div style="text-align:center">
+  <span class="badge rounded-pill bg-light text-dark" style="height:4rem;width: 25rem;"><h3 style="text-align: center;padding-top: 0.5rem;"><a href="/booking" style="color:rgb(67, 86, 225);">Search Garages Near Me</a></h3></span>&nbsp;&nbsp;
+  <span class="badge rounded-pill bg-light text-dark" style="height:4rem;width: 20rem;"><h3 style="text-align: center;padding-top: 0.5rem;"><a href="/feedback" style="color:rgb(67, 86, 225);">Give Feedback</a></h3></span> 
+  <br><br><br><br><br>
+   <!-- <span class="badge rounded-pill bg-primary text-dark" style="height:6rem;width: 12rem;"><h2 style="text-align: center;padding-top: 1rem;">primary</h2</span> --> 
+   </div>
+  </div>
+  <br><br>
+   {% endblock body %}
+   
